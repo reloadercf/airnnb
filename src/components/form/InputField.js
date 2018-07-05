@@ -24,8 +24,10 @@ export default class InputField extends Component {
     this.state = {
       secureInput: props.inputType === 'text' || props.inputType === 'email' ? false : true,
       scaleCheckmarkValue: new Animated.Value(0),
+      inputValue: props.defaultValue,
     };
     this.toggleShowPassword = this.toggleShowPassword.bind(this);
+    this.onChangeText = this.onChangeText.bind(this);
   }
 
   scaleCheckmark(value) {
@@ -43,8 +45,13 @@ export default class InputField extends Component {
     this.setState({ secureInput: !this.state.secureInput });
   }
 
+  onChangeText(text) {
+    this.props.onChangeText(text);
+    this.setState({ inputValue: text });
+  }
+
   render() {
-  	const {
+    const {
       labelText,
       labelTextSize,
       labelTextWeight,
@@ -59,14 +66,14 @@ export default class InputField extends Component {
       autoFocus,
       autoCapitalize,
       placeholder,
-      value,
+      defaultValue,
     } = this.props;
-  	const { secureInput, scaleCheckmarkValue } = this.state;
-  	const fontSize = labelTextSize || 14;
+    const { secureInput, scaleCheckmarkValue, inputValue } = this.state;
+    const fontSize = labelTextSize || 14;
     const fontWeight = labelTextWeight || '700';
-  	const color = labelColor || colors.white;
-  	const inputColor = textColor || colors.white;
-  	const borderBottom = borderBottomColor || 'transparent';
+    const color = labelColor || colors.white;
+    const inputColor = textColor || colors.white;
+    const borderBottom = borderBottomColor || 'transparent';
     const keyboardType = inputType === 'email' ? 'email-address' : 'default';
     let customInputStyle = inputStyle || {};
     if (!inputStyle || inputStyle && !inputStyle.paddingBottom) {
@@ -102,14 +109,15 @@ export default class InputField extends Component {
         <TextInput
           style={[{color: inputColor, borderBottomColor: borderBottom}, inputStyle, styles.inputField]}
           secureTextEntry={secureInput}
-          onChangeText={onChangeText}
+          onChangeText={this.onChangeText}
           keyboardType={keyboardType}
           autoFocus={autoFocus}
           autoCapitalize={autoCapitalize}
           autoCorrect={false}
           underlineColorAndroid="transparent"
           placeholder={placeholder}
-          value={value || ''}
+          defaultValue={inputValue}
+          value={inputValue}
         />
       </View>
     );
@@ -131,15 +139,15 @@ InputField.propTypes = {
   labelTextWeight: PropTypes.string,
   inputStyle: PropTypes.object,
   placeholder: PropTypes.string,
-  value: PropTypes.string,
+  defaultValue: PropTypes.string,
 };
 
 const styles = StyleSheet.create({
   wrapper: {
-  	display: 'flex',
+    display: 'flex',
   },
   label: {
-  	marginBottom: 20,
+    marginBottom: 20,
   },
   inputField: {
     borderBottomWidth: 1,

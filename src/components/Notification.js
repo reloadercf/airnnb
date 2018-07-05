@@ -52,7 +52,7 @@ export default class Notification extends Component {
   	const { positionValue } = this.state;
   	return (
   	  <Animated.View style={[{marginBottom: positionValue}, styles.wrapper]}>
-  	    <View style={styles.notificationContent}>
+  	    <View style={styles.errorMessageContainer}>
   	      <View style={styles.errorMessage}>
             <Text style={styles.errorText}>{type}</Text>
   	        <Text>{firstLine}</Text>
@@ -106,6 +106,11 @@ const styles = StyleSheet.create({
     flex: 1,
     marginBottom: 2,
     fontSize: 14,
+  },
+  errorMessageContainer: {
+    flexDirection: 'row',
+    flex: 1,
+    marginBottom: 2,
   },
   closeButton: {
     position: 'absolute',

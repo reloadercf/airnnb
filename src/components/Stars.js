@@ -22,6 +22,7 @@ export default class Stars extends Component {
     for(let i = 0; i < 5; i++) {
       starElements.push(
         <Icon
+          key={`star-${i}`}
           name="star"
           size={size}
           color={starsNumber > i ? color : colors.gray02}

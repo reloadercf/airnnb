@@ -27,7 +27,6 @@ import RoundedButton from '../components/buttons/RoundedButton';
 
 class CreateList extends Component {
   static navigationOptions = ({ navigation }) => ({
-    tabBarVisible: false,
     headerLeft: <TouchableOpacity
       style={styles.closeButton}
       onPress={() => navigation.goBack()}
@@ -98,7 +97,7 @@ class CreateList extends Component {
                 labelColor={colors.lightBlack}
                 textColor={colors.lightBlack}
                 placeholder={location}
-                value={location}
+                defaultValue={location}
                 borderBottomColor={colors.gray06}
                 inputType="email"
                 inputStyle={{fontSize: 18, fontWeight: '400', paddingBottom: 30}}

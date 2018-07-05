@@ -66,9 +66,7 @@ export default class HeartButton extends Component {
 HeartButton.propTypes = {
   color: PropTypes.string.isRequired,
   selectedColor: PropTypes.string.isRequired,
-  itemId: PropTypes.number.isRequired,
   onPress: PropTypes.func,
-  selected: PropTypes.boolean,
 }
 
 const styles = StyleSheet.create({

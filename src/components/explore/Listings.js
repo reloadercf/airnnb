@@ -106,7 +106,7 @@ Listings.propTypes = {
   listings: PropTypes.array.isRequired,
   showAddToFav: PropTypes.bool,
   handleAddToFav: PropTypes.func,
-  favouriteListings: PropTypes.object,
+  favouriteListings: PropTypes.array,
 };
 
 const styles = StyleSheet.create({
