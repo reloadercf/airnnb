@@ -76,8 +76,8 @@ const listings = [
         priceType: 'per person',
         stars: 15,
         color: colors.brown02,
-  	  }
-  	]
+  	  },
+  	],
   },
   {
   	title: 'Homes',
@@ -138,8 +138,8 @@ const listings = [
         priceType: 'per night',
         stars: 132,
         color: colors.green01,
-  	  }
-  	]
+  	  },
+  	],
   },
   {
   	title: 'Popular Reservations',
@@ -195,9 +195,9 @@ const listings = [
         priceType: 'per person',
         stars: 0,
         color: colors.gray04,
-      }
-  	]
-  }
+      },
+  	],
+  },
 ];
 
 export default listings;

@@ -3,7 +3,7 @@
  * @author: Andy
  * @Url: https://www.cubui.com
  */
- 
+
 import React, { Component } from 'react';
 import {
   View,
@@ -21,7 +21,7 @@ export default class SavedContainer extends Component {
       </View>
     );
   }
-};
+}
 
 const styles = StyleSheet.create({
   wrapper: {

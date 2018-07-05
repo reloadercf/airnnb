@@ -4,7 +4,7 @@
  * @Url: https://www.cubui.com
  */
 
-export const transparentHeaderStyle = {
+const transparentHeaderStyle = {
   backgroundColor: 'transparent',
   position: 'absolute',
   top: 0,
@@ -12,4 +12,6 @@ export const transparentHeaderStyle = {
   right: 0,
   borderBottomWidth: 0,
   elevation: 0,
-}
+};
+
+export default transparentHeaderStyle;

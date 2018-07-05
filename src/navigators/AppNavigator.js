@@ -3,7 +3,7 @@
  * @author: Andy
  * @Url: https://www.cubui.com
  */
- 
+
 import React, { Component } from 'react';
 import { compose, createStore, applyMiddleware } from 'redux';
 import {
@@ -18,12 +18,12 @@ import AppRouteConfigs from './AppRouteConfigs';
 import reducer from '../redux/reducers';
 
 const middleware = createReactNavigationReduxMiddleware(
-  "root",
+  'root',
   state => state.nav,
 );
 
-const App = reduxifyNavigator(AppRouteConfigs, "root");
-const mapStateToProps = (state) => ({
+const App = reduxifyNavigator(AppRouteConfigs, 'root');
+const mapStateToProps = state => ({
   state: state.nav,
 });
 
@@ -40,15 +40,15 @@ const configureStore = (initialState) => {
     ),
   );
   return createStore(reducer, initialState, enhancer);
-}
+};
 
 class Root extends Component {
   render() {
-    return <AppWithNavigationState />
+    return <AppWithNavigationState />;
   }
 }
 
 export {
   configureStore,
-  Root
-}
+  Root,
+};

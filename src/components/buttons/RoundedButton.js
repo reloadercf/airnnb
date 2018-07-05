@@ -3,7 +3,7 @@
  * @author: Andy
  * @Url: https://www.cubui.com
  */
- 
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -21,7 +21,7 @@ export default class RoundedButton extends Component {
       loading,
       disabled,
       text,
-      textColor, 
+      textColor,
       background,
       icon,
       handleOnPress,
@@ -29,7 +29,7 @@ export default class RoundedButton extends Component {
       textWeight,
       iconPosition,
       textAlign,
-      borderColor
+      borderColor,
     } = this.props;
   	const backgroundColor = background || 'transparent';
   	const color = textColor || colors.black;
@@ -43,22 +43,29 @@ export default class RoundedButton extends Component {
 
     return (
       <TouchableOpacity
-        style={[{opacity: opacityStyle, backgroundColor, borderColor: border},styles.wrapper]}
+        style={[{ opacity: opacityStyle, backgroundColor, borderColor: border }, styles.wrapper]}
         onPress={handleOnPress}
         activeOpacity={0.7}
         disabled={disabled || loading}
       >
         <View style={styles.buttonTextWrapper}>
           {iconLocation === 'left' && !loading ? icon : null}
-          {loading ?
-            <View style={styles.loaderContainer}>
-              <Image
-                style={styles.loaderImage}
-                source={require('../../img/whiteLoader.gif')}
-              />
-            </View>
-          : null }
-          <Text style={[{opacity: textOpacity, color, fontSize, fontWeight, textAlign: alignPosition}, styles.buttonText]}>{text}</Text>
+          {loading
+            ? (
+              <View style={styles.loaderContainer}>
+                <Image
+                  style={styles.loaderImage}
+                  source={require('../../img/whiteLoader.gif')}
+                />
+              </View>
+            )
+            : null }
+          <Text style={[{
+            opacity: textOpacity, color, fontSize, fontWeight, textAlign: alignPosition,
+          }, styles.buttonText]}
+          >
+            {text}
+          </Text>
           {iconLocation === 'right' && !loading ? icon : null}
         </View>
       </TouchableOpacity>
@@ -119,5 +126,5 @@ const styles = StyleSheet.create({
     marginLeft: -20,
     top: '50%',
     marginTop: -20,
-  }
+  },
 });

@@ -14,7 +14,7 @@ const AppRouteConfigs = createStackNavigator({
   	navigationOptions: {
       header: null,
       gesturesEnabled: false,
-  	}
+  	},
   },
   LogIn: { screen: LogIn },
   ForgotPassword: { screen: ForgotPassword },

@@ -3,23 +3,23 @@
  * @author: Andy
  * @Url: https://www.cubui.com
  */
- 
+
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import colors from '../styles/colors';
 import {
   View,
   Text,
   StyleSheet,
 } from 'react-native';
+import colors from '../styles/colors';
 
 export default class Stars extends Component {
   get stars() {
     const { votes, size, color } = this.props;
     const starsNumber = parseInt(votes);
     const starElements = [];
-    for(let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
       starElements.push(
         <Icon
           key={`star-${i}`}
@@ -27,7 +27,7 @@ export default class Stars extends Component {
           size={size}
           color={starsNumber > i ? color : colors.gray02}
           style={styles.star}
-        />
+        />,
       );
     }
     return starElements;
@@ -36,12 +36,16 @@ export default class Stars extends Component {
   render() {
   	const { votes } = this.props;
   	return (
-  	  <View style={styles.wrapper}>
-  	    <View style={styles.stars}>
-  	      {this.stars}
-  	      {votes ? <Text style={styles.votesNumber}>{votes}</Text> : null}
-  	    </View>
-  	  </View>
+    <View style={styles.wrapper}>
+      <View style={styles.stars}>
+        {this.stars}
+        {votes ? (
+          <Text style={styles.votesNumber}>
+            {votes}
+          </Text>
+        ) : null}
+      </View>
+    </View>
   	);
   }
 }

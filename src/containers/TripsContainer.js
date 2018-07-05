@@ -3,7 +3,7 @@
  * @author: Andy
  * @Url: https://www.cubui.com
  */
- 
+
 import React, { Component } from 'react';
 import {
   View,
@@ -15,15 +15,17 @@ export default class TripsContainer extends Component {
   render() {
     return (
       <View style={styles.wrapper}>
-        <Text>Trips Container</Text>
+        <Text>
+Trips Container
+        </Text>
       </View>
     );
   }
-};
+}
 
 const styles = StyleSheet.create({
   wrapper: {
     display: 'flex',
     padding: 50,
-  }
+  },
 });

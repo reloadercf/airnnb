@@ -3,7 +3,7 @@
  * @author: Andy
  * @Url: https://www.cubui.com
  */
- 
+
 import React, { Component } from 'react';
 import {
   View,
@@ -37,12 +37,12 @@ export default class ExploreContainer extends Component {
     const { navigate } = this.props.navigation;
     let { favouriteListings } = this.state;
 
-    var index = favouriteListings.indexOf(listing.id);
+    const index = favouriteListings.indexOf(listing.id);
     if (index > -1) {
       favouriteListings = favouriteListings.filter(item => item !== listing.id);
-      this.setState({favouriteListings});
+      this.setState({ favouriteListings });
     } else {
-      navigate('CreateList', {listing, onCreateListClose: this.onCreateListClose});
+      navigate('CreateList', { listing, onCreateListClose: this.onCreateListClose });
     }
   }
 
@@ -53,27 +53,25 @@ export default class ExploreContainer extends Component {
     } else {
       favouriteListings = favouriteListings.filter(item => item !== listingId);
     }
-    this.setState({favouriteListings});
+    this.setState({ favouriteListings });
   }
 
   renderListings() {
-    return listings.map((listing, index) => {
-      return (
-        <View
-          key={`listing-${index}`}
-        >
-          <Listings
-            key={`listing-item-${index}`}
-            title={listing.title}
-            boldTitle={listing.boldTitle}
-            listings={listing.listings}
-            showAddToFav={listing.showAddToFav}
-            handleAddToFav={this.handleAddToFav}
-            favouriteListings={this.state.favouriteListings}
-          />
-        </View>
-      );
-    });
+    return listings.map((listing, index) => (
+      <View
+        key={`listing-${index}`}
+      >
+        <Listings
+          key={`listing-item-${index}`}
+          title={listing.title}
+          boldTitle={listing.boldTitle}
+          listings={listing.listings}
+          showAddToFav={listing.showAddToFav}
+          handleAddToFav={this.handleAddToFav}
+          favouriteListings={this.state.favouriteListings}
+        />
+      </View>
+    ));
   }
 
   render() {
@@ -84,7 +82,9 @@ export default class ExploreContainer extends Component {
           style={styles.scrollview}
           contentContainerStyle={styles.scrollViewContent}
         >
-          <Text style={styles.heading}>Explore Airbnb</Text>
+          <Text style={styles.heading}>
+Explore Airbnb
+          </Text>
           <View style={styles.categories}>
             <Categories categories={categoriesList} />
           </View>
@@ -93,7 +93,7 @@ export default class ExploreContainer extends Component {
       </View>
     );
   }
-};
+}
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -115,5 +115,5 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingBottom: 20,
     color: colors.gray04,
-  }
+  },
 });

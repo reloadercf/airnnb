@@ -7,7 +7,7 @@
 import React from 'react';
 import {
   createBottomTabNavigator,
-  createStackNavigator, 
+  createStackNavigator,
 } from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ExploreContainer from '../containers/ExploreContainer';
@@ -19,11 +19,11 @@ import CreateList from '../screens/CreateList';
 import colors from '../styles/colors';
 
 const ExploreTab = createStackNavigator({
-  'ExploreContainer': {
+  ExploreContainer: {
     screen: ExploreContainer,
     navigationOptions: {
       header: null,
-    }
+    },
   },
   CreateList: { screen: CreateList },
 },
@@ -45,19 +45,20 @@ ExploreTab.navigationOptions = ({ navigation }) => {
 
 
 const LoggedInTabNavigator = createBottomTabNavigator({
-  'Explore': { screen: ExploreTab,
+  Explore: {
+    screen: ExploreTab,
     navigationOptions: {
       tabBarLabel: 'EXPLORE',
       tabBarIcon: ({ tintColor }) => (
         <Icon
-          name='ios-search'
+          name="ios-search"
           size={22}
           color={tintColor}
         />
       ),
-    }
+    },
   },
-  'Saved': {
+  Saved: {
     screen: SavedContainer,
     navigationOptions: {
       tabBarLabel: 'SAVED',
@@ -68,9 +69,9 @@ const LoggedInTabNavigator = createBottomTabNavigator({
           color={tintColor}
         />
       ),
-    }
+    },
   },
-  'Trips': {
+  Trips: {
     screen: TripsContainer,
     navigationOptions: {
       tabBarLabel: 'TRIPS',
@@ -81,10 +82,10 @@ const LoggedInTabNavigator = createBottomTabNavigator({
           color={tintColor}
         />
       ),
-    }
-  }, 
-  'Inbox': {
-    screen:  InboxContainer,
+    },
+  },
+  Inbox: {
+    screen: InboxContainer,
     navigationOptions: {
       tabBarLabel: 'INBOX',
       tabBarIcon: ({ tintColor }) => (
@@ -94,9 +95,9 @@ const LoggedInTabNavigator = createBottomTabNavigator({
           color={tintColor}
         />
       ),
-    }
+    },
   },
-  'Profile': {
+  Profile: {
     screen: ProfileContainer,
     navigationOptions: {
       tabBarLabel: 'PROFILE',
@@ -107,7 +108,7 @@ const LoggedInTabNavigator = createBottomTabNavigator({
           color={tintColor}
         />
       ),
-    }
+    },
   },
 }, {
   tabBarOptions: {
@@ -115,7 +116,7 @@ const LoggedInTabNavigator = createBottomTabNavigator({
       fontWeight: '600',
       marginBottom: 5,
     },
-    activeTintColor: colors.pink
+    activeTintColor: colors.pink,
   },
   tabBarPosition: 'bottom',
 });
