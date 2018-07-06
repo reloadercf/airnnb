@@ -5,22 +5,20 @@
  */
 
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import {
   View,
   Text,
   TouchableOpacity,
   TouchableHighlight,
-  StyleSheet,
   ScrollView,
-  Button,
 } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Icon from 'react-native-vector-icons/Ionicons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-import { ActionCreators } from '../redux/actions';
+import ActionCreators from '../redux/actions';
 import colors from '../styles/colors';
-import transparentHeaderStyle from '../styles/navigation';
 import InputField from '../components/form/InputField';
 import RadioInput from '../components/form/RadioInput';
 import RoundedButton from '../components/buttons/RoundedButton';
@@ -28,16 +26,18 @@ import styles from './styles/CreateList';
 
 class CreateList extends Component {
   static navigationOptions = ({ navigation }) => ({
-    headerLeft: <TouchableOpacity
-      style={styles.closeButton}
-      onPress={() => navigation.goBack()}
-    >
-      <Icon
-        name="md-close"
-        size={30}
-        color={colors.lightBlack}
-      />
-    </TouchableOpacity>,
+    headerLeft: (
+      <TouchableOpacity
+        style={styles.closeButton}
+        onPress={() => navigation.goBack()}
+      >
+        <Icon
+          name="md-close"
+          size={30}
+          color={colors.lightBlack}
+        />
+      </TouchableOpacity>
+    ),
     headerStyle: styles.headerStyle,
   });
 
@@ -70,7 +70,8 @@ class CreateList extends Component {
   }
 
   handleCreateList() {
-    const { goBack } = this.props.navigation;
+    const { navigation } = this.props;
+    const { goBack } = navigation;
     this.setState({ loading: true });
     this.listCreated = true;
 
@@ -83,13 +84,13 @@ class CreateList extends Component {
   }
 
   render() {
-    const { privacyOption, location } = this.state;
+    const { privacyOption, location, loading } = this.state;
 
     return (
       <View style={styles.wrapper}>
         <ScrollView style={styles.scrollView}>
           <Text style={styles.heading}>
-Create a list
+            Create a list
           </Text>
           <View style={styles.content}>
             <View style={styles.inputWrapper}>
@@ -111,7 +112,7 @@ Create a list
             </View>
             <View style={styles.privacyOptions}>
               <Text style={styles.privacyHeading}>
-Privacy
+                Privacy
               </Text>
               <TouchableHighlight
                 onPress={() => this.selectPrivacyOption('public')}
@@ -120,10 +121,10 @@ Privacy
               >
                 <View>
                   <Text style={styles.privacyOptionTitle}>
-Public
+                    Public
                   </Text>
                   <Text style={styles.privacyOptionDescription}>
-Visible to everyone and included on your public Airbnb profile.
+                    Visible to everyone and included on your public Airbnb profile.
                   </Text>
                   <View style={styles.privacyRadioInput}>
                     <RadioInput
@@ -145,10 +146,10 @@ Visible to everyone and included on your public Airbnb profile.
               >
                 <View>
                   <Text style={styles.privacyOptionTitle}>
-Private
+                    Private
                   </Text>
                   <Text style={styles.privacyOptionDescription}>
-Visible only to you and any friends you invite.
+                    Visible only to you and any friends you invite.
                   </Text>
                   <View style={styles.privacyRadioInput}>
                     <RadioInput
@@ -174,12 +175,12 @@ Visible only to you and any friends you invite.
             borderColor="transparent"
             iconPosition="left"
             disabled={!location}
-            loading={this.state.loading}
+            loading={loading}
             icon={(
               <View style={styles.buttonIcon}>
                 <FontAwesomeIcon name="angle-right" color={colors.white} size={30} />
               </View>
-)}
+            )}
             handleOnPress={this.handleCreateList}
           />
         </View>
@@ -189,5 +190,17 @@ Visible only to you and any friends you invite.
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators(ActionCreators, dispatch);
+
+CreateList.propTypes = {
+  navigation: PropTypes.shape({
+    state: PropTypes.shape({
+      params: PropTypes.shape({
+        listing: PropTypes.shape({
+          location: PropTypes.string,
+        }),
+      }),
+    }),
+  }).isRequired,
+};
 
 export default connect(null, mapDispatchToProps)(CreateList);

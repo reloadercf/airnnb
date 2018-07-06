@@ -4,7 +4,9 @@
  * @Url: https://www.cubui.com
  */
 
-import * as LoggedOut from './loggedOut';
+import * as Navigation from './navigation';
 
-export const ActionCreators = Object.assign({},
-  LoggedOut);
+const ActionCreators = Object.assign({},
+  Navigation);
+
+export default ActionCreators;

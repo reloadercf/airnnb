@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   createBottomTabNavigator,
   createStackNavigator,
@@ -43,71 +44,56 @@ ExploreTab.navigationOptions = ({ navigation }) => {
   };
 };
 
+const CustomTabBarIcon = (name, size) => {
+  const icon = ({ tintColor }) => (
+    <Icon
+      name={name}
+      size={size}
+      color={tintColor}
+    />
+  );
+
+  icon.propTypes = {
+    tintColor: PropTypes.string.isRequired,
+  };
+
+  return icon;
+};
 
 const LoggedInTabNavigator = createBottomTabNavigator({
   Explore: {
     screen: ExploreTab,
     navigationOptions: {
       tabBarLabel: 'EXPLORE',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon
-          name="ios-search"
-          size={22}
-          color={tintColor}
-        />
-      ),
+      tabBarIcon: CustomTabBarIcon('ios-search', 22),
     },
   },
   Saved: {
     screen: SavedContainer,
     navigationOptions: {
       tabBarLabel: 'SAVED',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon
-          name="ios-heart-outline"
-          size={22}
-          color={tintColor}
-        />
-      ),
+      tabBarIcon: CustomTabBarIcon('ios-heart-outline', 22),
     },
   },
   Trips: {
     screen: TripsContainer,
     navigationOptions: {
       tabBarLabel: 'TRIPS',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon
-          name="ios-ionic"
-          size={21}
-          color={tintColor}
-        />
-      ),
+      tabBarIcon: CustomTabBarIcon('ios-ionic', 21),
     },
   },
   Inbox: {
     screen: InboxContainer,
     navigationOptions: {
       tabBarLabel: 'INBOX',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon
-          name="ios-archive-outline"
-          size={25}
-          color={tintColor}
-        />
-      ),
+      tabBarIcon: CustomTabBarIcon('ios-archive-outline', 25),
     },
   },
   Profile: {
     screen: ProfileContainer,
     navigationOptions: {
       tabBarLabel: 'PROFILE',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon
-          name="ios-contact-outline"
-          size={22}
-          color={tintColor}
-        />
-      ),
+      tabBarIcon: CustomTabBarIcon('ios-contact-outline', 22),
     },
   },
 }, {

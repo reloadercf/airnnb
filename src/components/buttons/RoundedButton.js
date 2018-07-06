@@ -83,7 +83,7 @@ RoundedButton.propTypes = {
   borderColor: PropTypes.string,
   icon: PropTypes.object,
   iconPosition: PropTypes.string,
-  handleOnPress: PropTypes.func.isRequired,
+  handleOnPress: PropTypes.func,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
 };
