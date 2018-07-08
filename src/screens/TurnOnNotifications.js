@@ -25,6 +25,7 @@ export default class TurnOnNotifications extends Component {
   static navigationOptions = () => ({
     headerLeft: null,
     headerStyle: transparentHeaderStyle,
+    headerTransparent: true,
     gesturesEnabled: false,
   });
 

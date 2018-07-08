@@ -29,6 +29,7 @@ export default class ForgotPassword extends Component {
       icon={<Icon name="angle-left" color={colors.white} size={30} />}
     />,
     headerStyle: transparentHeaderStyle,
+    headerTransparent: true,
     headerTintColor: colors.white,
   });
 

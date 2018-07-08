@@ -25,18 +25,19 @@ export default class LoggedOut extends Component {
   static navigationOptions = ({ navigation }) => ({
     headerRight: <NavBarButton handleButtonPress={() => navigation.navigate('LogIn')} location="right" color={colors.white} text="Log In" />,
     headerStyle: transparentHeaderStyle,
+    headerTransparent: true,
     headerTintColor: colors.white,
   });
 
-  static onFacebookPress() {
+  onFacebookPress() {
     alert('Facebook button pressed');
   }
 
-  static onCreateAccountPress() {
+  onCreateAccountPress() {
     alert('Create Account button pressed');
   }
 
-  static onMoreOptionsPress() {
+  onMoreOptionsPress() {
     alert('More options button pressed');
   }
 

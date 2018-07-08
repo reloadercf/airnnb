@@ -22,9 +22,9 @@ export default class NavBarButton extends Component {
   	let content;
   	if (text) {
   	  content = (
-    <Text style={[{ color }, marginPosition, styles.buttonText]}>
-      {text}
-    </Text>
+        <Text style={[{ color }, marginPosition, styles.buttonText]}>
+          {text}
+        </Text>
       );
   	} else if (icon) {
   	  content = (
