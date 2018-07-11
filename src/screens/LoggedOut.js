@@ -30,15 +30,15 @@ export default class LoggedOut extends Component {
   });
 
   onFacebookPress() {
-    alert('Facebook button pressed');
+    //alert('Facebook button pressed');
   }
 
   onCreateAccountPress() {
-    alert('Create Account button pressed');
+    //alert('Create Account button pressed');
   }
 
   onMoreOptionsPress() {
-    alert('More options button pressed');
+    //alert('More options button pressed');
   }
 
   render() {
