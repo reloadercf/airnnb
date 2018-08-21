@@ -11,6 +11,8 @@ import {
   ScrollView,
   StyleSheet,
 } from 'react-native';
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
 import SearchBar from '../components/SearchBar';
 import Categories from '../components/explore/Categories';
 import Listings from '../components/explore/Listings';
@@ -18,7 +20,7 @@ import colors from '../styles/colors';
 import categoriesList from '../data/categories';
 import listings from '../data/listings';
 
-export default class ExploreContainer extends Component {
+class ExploreContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -75,6 +77,10 @@ export default class ExploreContainer extends Component {
   }
 
   render() {
+    const { data } = this.props;
+
+    console.log(data.multipleListings)
+
     return (
       <View style={styles.wrapper}>
         <SearchBar />
@@ -117,3 +123,17 @@ const styles = StyleSheet.create({
     color: colors.gray04,
   },
 });
+
+
+const ListingsQuery = gql`
+  query {
+    multipleListings{
+      title,
+      description
+    }
+  }
+`
+
+const ExploreContainerTab = graphql(ListingsQuery)(ExploreContainer);
+
+export default ExploreContainerTab;

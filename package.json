@@ -8,8 +8,14 @@
     "lint": "./node_modules/.bin/eslint src/"
   },
   "dependencies": {
+    "apollo-cache-inmemory": "^1.2.8",
+    "apollo-client": "^2.4.0",
+    "apollo-link-http": "^1.5.4",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
+    "react-apollo": "^2.1.11",
     "react-native": "^0.56.0",
     "react-native-vector-icons": "^4.6.0",
     "react-navigation": "^2.6.2",
