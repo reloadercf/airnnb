@@ -29,16 +29,16 @@ export default class LoggedOut extends Component {
     headerTintColor: colors.white,
   });
 
-  onFacebookPress() {
-    //alert('Facebook button pressed');
+  static onFacebookPress() {
+    alert('Facebook button pressed');
   }
 
-  onCreateAccountPress() {
-    //alert('Create Account button pressed');
+  static onCreateAccountPress() {
+    alert('Create Account button pressed');
   }
 
-  onMoreOptionsPress() {
-    //alert('More options button pressed');
+  static onMoreOptionsPress() {
+    alert('More options button pressed');
   }
 
   render() {

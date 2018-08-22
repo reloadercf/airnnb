@@ -10,11 +10,11 @@ import LoggedInTabNavigator from './LoggedInTabNavigator';
 const AppRouteConfigs = createStackNavigator({
   LoggedOut: { screen: LoggedOut },
   LoggedIn: {
-  	screen: LoggedInTabNavigator,
-  	navigationOptions: {
+    screen: LoggedInTabNavigator,
+    navigationOptions: {
       header: null,
       gesturesEnabled: false,
-  	},
+    },
   },
   LogIn: { screen: LogIn },
   ForgotPassword: { screen: ForgotPassword },
