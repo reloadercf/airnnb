@@ -16,7 +16,7 @@ export default class ProfileContainer extends Component {
     return (
       <View style={styles.wrapper}>
         <Text>
-Profile Container
+Perfil DIPRA
         </Text>
       </View>
     );

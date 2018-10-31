@@ -23,7 +23,7 @@ const airbnbLogo = require('../img/airbnb-logo.png');
 
 export default class LoggedOut extends Component {
   static navigationOptions = ({ navigation }) => ({
-    headerRight: <NavBarButton handleButtonPress={() => navigation.navigate('LogIn')} location="right" color={colors.white} text="Log In" />,
+    headerRight: <NavBarButton handleButtonPress={() => navigation.navigate('LogIn')} location="right" color={colors.white} text="ENTRAR a DIPRA" />,
     headerStyle: transparentHeaderStyle,
     headerTransparent: true,
     headerTintColor: colors.white,
@@ -50,17 +50,17 @@ export default class LoggedOut extends Component {
             style={styles.logo}
           />
           <Text style={styles.welcomeText}>
-Welcome to Airbnb.
+Bienvenido a DIPRA
           </Text>
           <RoundedButton
-            text="Continue with Facebook"
+            text="Usa Facebook para entrar"
             textColor={colors.green01}
             background={colors.white}
             icon={<Icon name="facebook" size={20} style={styles.facebookButtonIcon} />}
             handleOnPress={this.onFacebookPress}
           />
           <RoundedButton
-            text="Create Account"
+            text="LLAma a ESTEBAN"
             textColor={colors.white}
             handleOnPress={this.onCreateAccountPress}
           />
@@ -70,12 +70,12 @@ Welcome to Airbnb.
             onPress={this.onMoreOptionsPress}
           >
             <Text style={styles.moreOptionsButtonText}>
-              More options
+              Mas Opciones de DIPRA
             </Text>
           </TouchableHighlight>
           <View style={styles.termsAndConditions}>
             <Text style={styles.termsText}>
-              By tapping Continue, Create Account or More
+             Para continuar puedes crar una cuenta
             </Text>
             <Text style={styles.termsText}>
               {' options,'}
@@ -85,7 +85,7 @@ Welcome to Airbnb.
             </Text>
             <TouchableHighlight style={styles.linkButton}>
               <Text style={styles.termsText}>
-                Terms of Service
+                Leer terminos y condiciones para eso
               </Text>
             </TouchableHighlight>
             <Text style={styles.termsText}>
@@ -93,7 +93,7 @@ Welcome to Airbnb.
             </Text>
             <TouchableHighlight style={styles.linkButton}>
               <Text style={styles.termsText}>
-                Payments Terms of Service
+                El servicio para nosotros es importante
               </Text>
             </TouchableHighlight>
             <Text style={styles.termsText}>
@@ -101,15 +101,15 @@ Welcome to Airbnb.
             </Text>
             <TouchableHighlight style={styles.linkButton}>
               <Text style={styles.termsText}>
-                Privacy Policy
+                Nuestras politicas de privacidad
               </Text>
             </TouchableHighlight>
             <Text style={styles.termsText}>
-              , and
+              , tambien
             </Text>
             <TouchableHighlight style={styles.linkButton}>
               <Text style={styles.termsText}>
-                Nondiscrimination Policy
+                El uso adecuado de datos en DIPRA
               </Text>
             </TouchableHighlight>
             <Text style={styles.termsText}>

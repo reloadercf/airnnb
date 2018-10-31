@@ -89,7 +89,7 @@ class ExploreContainer extends Component {
           contentContainerStyle={styles.scrollViewContent}
         >
           <Text style={styles.heading}>
-Explore Airbnb
+Explora en DIPRA
           </Text>
           <View style={styles.categories}>
             <Categories categories={categoriesList} />

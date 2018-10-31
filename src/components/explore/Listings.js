@@ -93,7 +93,7 @@ $
         </Text>
         <TouchableOpacity style={styles.seeAllBtn}>
           <Text style={styles.seeAllBtnText}>
-See all
+Ver todo
           </Text>
           <Icon
             name="angle-right"

@@ -16,7 +16,7 @@ export default class InboxContainer extends Component {
     return (
       <View style={styles.wrapper}>
         <Text>
-Inbox Container
+Bandeja de entrada dipra
         </Text>
       </View>
     );

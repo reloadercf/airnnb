@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   logo: {
-    width: 50,
-    height: 50,
-    marginTop: 50,
-    marginBottom: 40,
+    width: 100,
+    height: 100,
+    marginTop: 10,
+    marginBottom: 10,
   },
   welcomeText: {
     fontSize: headingTextSize,

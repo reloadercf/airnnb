@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     color: colors.green01,
-    marginBottom: 15,
+    marginBottom: 20,
   },
   title: {
     fontSize: 28,
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   notifyButton: {
-    width: 160,
+    width: 300,
     paddingTop: 12,
     paddingBottom: 12,
     borderRadius: 3,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   skipButton: {
     borderColor: colors.green01,
-    width: 100,
+    width: 300,
     borderWidth: 2,
     paddingTop: 12,
     paddingBottom: 12,

@@ -25,7 +25,7 @@ export default class SearchBar extends Component {
           style={styles.searchIcon}
         />
         <Text style={styles.textInput}>
-Try "Cape Town"
+Busqueda especifica en "DIPRA"
         </Text>
       </View>
     </View>

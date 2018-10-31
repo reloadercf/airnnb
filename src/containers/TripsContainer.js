@@ -16,7 +16,7 @@ export default class TripsContainer extends Component {
     return (
       <View style={styles.wrapper}>
         <Text>
-Trips Container
+Hola esto es la ubicación DIPRA
         </Text>
       </View>
     );

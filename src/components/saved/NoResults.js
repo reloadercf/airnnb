@@ -14,19 +14,19 @@ export default class NoResults extends Component {
     <View>
       <ScrollView style={styles.scrollView}>
         <Text style={styles.heading}>
-Saved
+Alerta DIPRA!!
         </Text>
         <Text style={styles.description}>
-Not every day is filled with adventures, but you can start planning for the next one.
+No tienes nada guardado.
         </Text>
         <Text style={styles.description}>
-Tap the heart on any home to start saving your favorites here.
+Te recordamos que puedes guardar.
         </Text>
       </ScrollView>
       <View style={styles.footer}>
         <TouchableHighlight style={styles.findHomesButton}>
           <Text style={styles.findHomesButtonText}>
-Find homes
+Regresa a DIPRA Home
           </Text>
         </TouchableHighlight>
       </View>

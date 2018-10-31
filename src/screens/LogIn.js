@@ -31,7 +31,7 @@ class LogIn extends Component {
       handleButtonPress={() => navigation.navigate('ForgotPassword')}
       location="right"
       color={colors.white}
-      text="Forgot Password"
+      text="Recupera tu contraseña"
     />,
     headerLeft: <NavBarButton
       handleButtonPress={() => navigation.goBack()}
@@ -134,10 +134,10 @@ class LogIn extends Component {
         <View style={styles.scrollViewWrapper}>
           <ScrollView style={styles.scrollView}>
             <Text style={styles.loginHeader}>
-Log In
+Introduce correo y contraseña
             </Text>
             <InputField
-              labelText="EMAIL ADDRESS"
+              labelText="Correo Electronico"
               labelTextSize={14}
               labelColor={colors.white}
               textColor={colors.white}
@@ -149,7 +149,7 @@ Log In
               autoFocus
             />
             <InputField
-              labelText="PASSWORD"
+              labelText="Contraseña"
               labelTextSize={14}
               labelColor={colors.white}
               textColor={colors.white}
@@ -174,8 +174,8 @@ Log In
             showNotification={showNotification}
             handleCloseNotification={this.handleCloseNotification}
             type="Error"
-            firstLine="Those credentials don't look right."
-            secondLine="Please try again."
+            firstLine="Pon las cosas bien."
+            secondLine="O llama a Esteban."
           />
         </View>
       </KeyboardAvoidingView>

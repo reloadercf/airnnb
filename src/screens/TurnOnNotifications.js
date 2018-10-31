@@ -72,11 +72,10 @@ export default class TurnOnNotifications extends Component {
             style={styles.icon}
           />
           <Text style={styles.title}>
-            Turn on notifications?
+            Notificaciones Prendidas
           </Text>
           <Text style={styles.description}>
-            We can let you know when someone messages you,
-            or notify you about other important account activity.
+            Las notificiaciones te sirven para ver todo lo que dipra comparte, estar al dia y generar comisiones.
           </Text>
           <TouchableHighlight
             style={[
@@ -89,7 +88,7 @@ export default class TurnOnNotifications extends Component {
             underlayColor={colors.green02}
           >
             <Text style={[{ color: colors.white }, styles.buttonText]}>
-  Yes, notify me
+ Si quiero mantenerme informado
             </Text>
           </TouchableHighlight>
           <TouchableHighlight
@@ -100,7 +99,7 @@ export default class TurnOnNotifications extends Component {
             underlayColor={colors.gray01}
           >
             <Text style={[{ color: colors.green01 }, styles.buttonText]}>
-  Skip
+  No quiero tener informacion nueva
             </Text>
           </TouchableHighlight>
         </View>

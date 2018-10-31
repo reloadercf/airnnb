@@ -90,12 +90,12 @@ class CreateList extends Component {
       <View style={styles.wrapper}>
         <ScrollView style={styles.scrollView}>
           <Text style={styles.heading}>
-            Create a list
+            Crear Favorito
           </Text>
           <View style={styles.content}>
             <View style={styles.inputWrapper}>
               <InputField
-                labelText="Title"
+                labelText="Titulo"
                 labelTextSize={16}
                 labelTextWeight="400"
                 labelColor={colors.lightBlack}
@@ -112,7 +112,7 @@ class CreateList extends Component {
             </View>
             <View style={styles.privacyOptions}>
               <Text style={styles.privacyHeading}>
-                Privacy
+                Privacidad
               </Text>
               <TouchableHighlight
                 onPress={() => this.selectPrivacyOption('public')}
@@ -121,10 +121,10 @@ class CreateList extends Component {
               >
                 <View>
                   <Text style={styles.privacyOptionTitle}>
-                    Public
+                    Publico
                   </Text>
                   <Text style={styles.privacyOptionDescription}>
-                    Visible to everyone and included on your public Airbnb profile.
+                    Visible para todos.
                   </Text>
                   <View style={styles.privacyRadioInput}>
                     <RadioInput
@@ -146,10 +146,10 @@ class CreateList extends Component {
               >
                 <View>
                   <Text style={styles.privacyOptionTitle}>
-                    Private
+                    Privado
                   </Text>
                   <Text style={styles.privacyOptionDescription}>
-                    Visible only to you and any friends you invite.
+                    Visible solo para invitados y amigos.
                   </Text>
                   <View style={styles.privacyRadioInput}>
                     <RadioInput
@@ -168,7 +168,7 @@ class CreateList extends Component {
         </ScrollView>
         <View style={styles.createButton}>
           <RoundedButton
-            text="Create"
+            text="Guardar"
             textColor={colors.white}
             textAlign="left"
             background={colors.green01}

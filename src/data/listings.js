@@ -24,7 +24,7 @@ const listing16Photo = require('./photos/listing16.png');
 
 const listings = [
   {
-    title: 'Experiences',
+    title: 'Experiencia',
     boldTitle: false,
     showAddToFav: true,
     listings: [
@@ -97,7 +97,7 @@ const listings = [
     ],
   },
   {
-    title: 'Homes',
+    title: 'Casas',
     boldTitle: false,
     showAddToFav: true,
     listings: [
@@ -159,7 +159,7 @@ const listings = [
     ],
   },
   {
-    title: 'Popular Reservations',
+    title: 'Populares',
     boldTitle: true,
     showAddToFav: false,
     listings: [

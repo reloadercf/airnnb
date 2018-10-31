@@ -96,15 +96,16 @@ export default class ForgotPassword extends Component {
         <View style={styles.scrollViewWrapper}>
           <ScrollView style={styles.scrollView}>
             <Text style={styles.forgotPasswordHeading}>
-Forgot your password?
+Se te Olivdo tu contraseña?
             </Text>
             <Text style={styles.forgotPasswordSubheading}>
-Enter your email to find your account
+Antes de Llamar a Esteban checa si tienes internet en tu telefono.
+Introduce tu correo para recuperar contraseña recuerda que necesitas internet.
             </Text>
             <InputField
               customStyle={{ marginBottom: 30 }}
               textColor={colors.white}
-              labelText="EMAIL ADDRESS"
+              labelText="Correo Electronico"
               labelTextSize={14}
               labelColor={colors.white}
               borderBottomColor={colors.white}
@@ -127,8 +128,8 @@ Enter your email to find your account
             showNotification={showNotification}
             handleCloseNotification={this.handleCloseNotification}
             type="Error"
-            firstLine="No account exists for the requested"
-            secondLine="email address."
+            firstLine="No estas registrado con este correo"
+            secondLine="Introduce un correo valido."
           />
         </View>
       </KeyboardAvoidingView>

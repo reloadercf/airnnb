@@ -64,35 +64,35 @@ const LoggedInTabNavigator = createBottomTabNavigator({
   Explore: {
     screen: ExploreTab,
     navigationOptions: {
-      tabBarLabel: 'EXPLORE',
+      tabBarLabel: 'DIPRA Inicio',
       tabBarIcon: CustomTabBarIcon('ios-search', 22),
     },
   },
   Saved: {
     screen: SavedContainer,
     navigationOptions: {
-      tabBarLabel: 'SAVED',
+      tabBarLabel: 'Favoritos',
       tabBarIcon: CustomTabBarIcon('ios-heart-outline', 22),
     },
   },
   Trips: {
     screen: TripsContainer,
     navigationOptions: {
-      tabBarLabel: 'TRIPS',
+      tabBarLabel: 'Sucursal',
       tabBarIcon: CustomTabBarIcon('ios-ionic', 21),
     },
   },
   Inbox: {
     screen: InboxContainer,
     navigationOptions: {
-      tabBarLabel: 'INBOX',
+      tabBarLabel: 'Bandeja',
       tabBarIcon: CustomTabBarIcon('ios-archive-outline', 25),
     },
   },
   Profile: {
     screen: ProfileContainer,
     navigationOptions: {
-      tabBarLabel: 'PROFILE',
+      tabBarLabel: 'Perfil',
       tabBarIcon: CustomTabBarIcon('ios-contact-outline', 22),
     },
   },
